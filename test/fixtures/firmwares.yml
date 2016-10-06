@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  iotdevice_id: 
+  download_url: MyString
+  version: MyString
+  name: MyString
+  readme_url: MyString
+  readme_title: MyString
+  readme_description: MyText
+  enabled: false
+  requirements: MyString
+
+two:
+  iotdevice_id: 
+  download_url: MyString
+  version: MyString
+  name: MyString
+  readme_url: MyString
+  readme_title: MyString
+  readme_description: MyText
+  enabled: false
+  requirements: MyString
