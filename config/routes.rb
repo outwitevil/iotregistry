@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :iotdevices
+  resources :iotdevices do
+  #->Prelang (voting/acts_as_votable)
+  member do
+    get "vote"
+  end
+end
+
 
   resources :reviews do
   #->Prelang (voting/acts_as_votable)
