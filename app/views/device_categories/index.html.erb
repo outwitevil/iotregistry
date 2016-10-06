@@ -1,27 +1,36 @@
-<h1>Listing device_categories</h1>
-
-<table>
+<%- model_class = DeviceCategory -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => DeviceCategory %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Iotdevice</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @device_categories.each do |device_category| %>
       <tr>
+        <td><%= device_category.id %></td>
         <td><%= device_category.name %></td>
-        <td><%= device_category.iotdevice %></td>
-        <td><%= link_to 'Show', device_category %></td>
-        <td><%= link_to 'Edit', edit_device_category_path(device_category) %></td>
-        <td><%= link_to 'Destroy', device_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l device_category.created_at, format: :long %></td>
+        <td>
+          <%= link_to device_category_path(device_category), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to device_category_path(device_category), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Device category', new_device_category_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_device_category_path,
+            :class => 'btn btn-primary' %>
