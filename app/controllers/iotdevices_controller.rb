@@ -1,5 +1,5 @@
 class IotdevicesController < ApplicationController
-  before_action :set_iotdevice, only: [:show, :edit, :update, :destroy]
+  before_action :set_iotdevice, only: [:show, :edit, :update, :destroy, :vote]
 
   # GET /iotdevices
   # GET /iotdevices.json
