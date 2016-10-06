@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manufacturer_id: 
+  user_id: 
+  product_url: MyString
+  updates_url: MyString
+  base_version: MyString
+
+two:
+  manufacturer_id: 
+  user_id: 
+  product_url: MyString
+  updates_url: MyString
+  base_version: MyString
