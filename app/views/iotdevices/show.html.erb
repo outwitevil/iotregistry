@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @iotdevice.manufacturer %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @iotdevice.user %>
+</p>
+
+<p>
+  <strong>Product url:</strong>
+  <%= @iotdevice.product_url %>
+</p>
+
+<p>
+  <strong>Updates url:</strong>
+  <%= @iotdevice.updates_url %>
+</p>
+
+<p>
+  <strong>Base version:</strong>
+  <%= @iotdevice.base_version %>
+</p>
+
+<%= link_to 'Edit', edit_iotdevice_path(@iotdevice) %> |
+<%= link_to 'Back', iotdevices_path %>

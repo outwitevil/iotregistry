@@ -1,0 +1,15 @@
+<%= simple_form_for(@iotdevice) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :manufacturer %>
+    <%= f.association :user %>
+    <%= f.input :product_url %>
+    <%= f.input :updates_url %>
+    <%= f.input :base_version %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
