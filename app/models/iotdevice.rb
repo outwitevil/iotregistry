@@ -6,4 +6,5 @@ class Iotdevice < ActiveRecord::Base
   has_many :firmwares
   validates_formatting_of :product_url, using: :url
   validates_formatting_of :updates_url, using: :url
+  acts_as_votable 
 end
