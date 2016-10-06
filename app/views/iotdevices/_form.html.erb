@@ -1,15 +1,28 @@
-<%= simple_form_for(@iotdevice) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.association :manufacturer %>
-    <%= f.association :user %>
-    <%= f.input :product_url %>
-    <%= f.input :updates_url %>
-    <%= f.input :base_version %>
+<%= form_for @iotdevice, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :product_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :product_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :updates_url, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :updates_url, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :base_version, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :base_version, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  iotdevices_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
