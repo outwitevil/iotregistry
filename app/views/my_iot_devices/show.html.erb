@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = MyIOTDevice -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => MyIOTDevice %></h1>
+</div>
 
-<p>
-  <strong>Iotdevice:</strong>
-  <%= @my_iot_device.iotdevice %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ipv4_address) %></dt>
+      <dd><pre class="prettyprint"><%= @my_iot_device.ipv4_address %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:installed_firmware_version) %></dt>
+      <dd><pre class="prettyprint"><%= @my_iot_device.installed_firmware_version %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @my_iot_device.user %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              my_iot_devices_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_my_iot_device_path(@my_iot_device), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              my_iot_device_path(@my_iot_device),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Ipv4 address:</strong>
-  <%= @my_iot_device.ipv4_address %>
-</p>
-
-<p>
-  <strong>Installed firmware version:</strong>
-  <%= @my_iot_device.installed_firmware_version %>
-</p>
-
-<%= link_to 'Edit', edit_my_iot_device_path(@my_iot_device) %> |
-<%= link_to 'Back', my_iot_devices_path %>
