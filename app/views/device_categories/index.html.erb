@@ -1,0 +1,27 @@
+<h1>Listing device_categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Iotdevice</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @device_categories.each do |device_category| %>
+      <tr>
+        <td><%= device_category.name %></td>
+        <td><%= device_category.iotdevice %></td>
+        <td><%= link_to 'Show', device_category %></td>
+        <td><%= link_to 'Edit', edit_device_category_path(device_category) %></td>
+        <td><%= link_to 'Destroy', device_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Device category', new_device_category_path %>

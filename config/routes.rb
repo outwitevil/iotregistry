@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :device_categories
+
   resources :my_iot_devices
 
   resources :firmwares do
