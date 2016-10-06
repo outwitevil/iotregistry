@@ -1,5 +1,5 @@
 class ManufacturersController < ApplicationController
-  before_action :set_manufacturer, only: [:show, :edit, :update, :destroy]
+  before_action :set_manufacturer, only: [:show, :edit, :update, :destroy, :vote]
 
   # GET /manufacturers
   # GET /manufacturers.json
