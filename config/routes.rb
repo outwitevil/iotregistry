@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :my_iot_devices
+
   resources :firmwares do
   #->Prelang (voting/acts_as_votable)
   member do

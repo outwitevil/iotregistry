@@ -1,0 +1,14 @@
+<%= simple_form_for(@my_iot_device) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :iotdevice %>
+    <%= f.association :user %>
+    <%= f.input :ipv4_address %>
+    <%= f.input :installed_firmware_version %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

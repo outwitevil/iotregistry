@@ -1,0 +1,31 @@
+<h1>Listing my_iot_devices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Iotdevice</th>
+      <th>User</th>
+      <th>Ipv4 address</th>
+      <th>Installed firmware version</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_iot_devices.each do |my_iot_device| %>
+      <tr>
+        <td><%= my_iot_device.iotdevice %></td>
+        <td><%= my_iot_device.user %></td>
+        <td><%= my_iot_device.ipv4_address %></td>
+        <td><%= my_iot_device.installed_firmware_version %></td>
+        <td><%= link_to 'Show', my_iot_device %></td>
+        <td><%= link_to 'Edit', edit_my_iot_device_path(my_iot_device) %></td>
+        <td><%= link_to 'Destroy', my_iot_device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My iot device', new_my_iot_device_path %>

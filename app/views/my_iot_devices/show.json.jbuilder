@@ -1,0 +1,1 @@
+json.partial! "my_iot_devices/my_iot_device", my_iot_device: @my_iot_device

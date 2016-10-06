@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Iotdevice:</strong>
+  <%= @my_iot_device.iotdevice %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @my_iot_device.user %>
+</p>
+
+<p>
+  <strong>Ipv4 address:</strong>
+  <%= @my_iot_device.ipv4_address %>
+</p>
+
+<p>
+  <strong>Installed firmware version:</strong>
+  <%= @my_iot_device.installed_firmware_version %>
+</p>
+
+<%= link_to 'Edit', edit_my_iot_device_path(@my_iot_device) %> |
+<%= link_to 'Back', my_iot_devices_path %>
