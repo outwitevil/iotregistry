@@ -1,5 +1,5 @@
 class FirmwaresController < ApplicationController
-  before_action :set_firmware, only: [:show, :edit, :update, :destroy]
+  before_action :set_firmware, only: [:show, :edit, :update, :destroy, :vote]
 
   # GET /firmwares
   # GET /firmwares.json
