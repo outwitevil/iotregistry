@@ -29,6 +29,7 @@ class MyIotDevicesController < ApplicationController
   # POST /my_iot_devices.json
   def create
     @my_iot_device = MyIotDevice.new(my_iot_device_params)
+    @my_iot_device.user = current_user
 
     respond_to do |format|
       if @my_iot_device.save
