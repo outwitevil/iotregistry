@@ -1,6 +1,5 @@
-<h1>Editing manufacturer</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @manufacturer %> |
-<%= link_to 'Back', manufacturers_path %>
+<%- model_class = Manufacturer -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Manufacturer %></h1>
+</div>
+<%= render :partial => 'form' %>
