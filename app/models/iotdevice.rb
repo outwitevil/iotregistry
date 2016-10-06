@@ -1,6 +1,6 @@
 class Iotdevice < ActiveRecord::Base
   belongs_to :manufacturer
-  belongs_to :user
+  has_many :user, through: :my_iot_device
   has_many :reviews
   has_one :device_category
   has_many :firmwares
