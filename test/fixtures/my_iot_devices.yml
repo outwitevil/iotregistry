@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  iotdevice_id: 
+  user_id: 
+  ipv4_address: MyString
+  installed_firmware_version: MyString
+
+two:
+  iotdevice_id: 
+  user_id: 
+  ipv4_address: MyString
+  installed_firmware_version: MyString
