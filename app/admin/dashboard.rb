@@ -10,6 +10,17 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
+    columns do
+      column do
+        panel "Manufacturer" do
+          ul do
+            Manufacturer.last(10).map do |manufacturer|
+              li link_to(manufacturer.name, admin_manufacturer_path(manufacturer))
+            end
+          end
+        end
+      end
+    end
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do
