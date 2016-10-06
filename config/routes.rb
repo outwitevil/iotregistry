@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'landings/index'
 
   resources :manufacturers do
-  #->Prelang (voting/acts_as_votable)
+  
   member do
     get "vote"
   end
@@ -10,7 +10,7 @@ end
 
 
   resources :iotdevices do
-  #->Prelang (voting/acts_as_votable)
+  
   member do
     get "vote"
   end
@@ -18,7 +18,7 @@ end
 
 
   resources :reviews do
-  #->Prelang (voting/acts_as_votable)
+  
   member do
     get "vote"
   end
@@ -30,7 +30,7 @@ end
   resources :my_iot_devices
 
   resources :firmwares do
-  #->Prelang (voting/acts_as_votable)
+  
   member do
     get "vote"
   end

@@ -24,8 +24,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -39,14 +37,14 @@ gem 'spring',        group: :development
 
 gem 'bundler'
 gem 'nokogiri'
-gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'devise', github: 'plataformatec/devise'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'bootstrap-sass', '3.3.5'
+gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
 gem 'simple_form'
-gem 'binding_of_caller'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'acts_as_votable', github: 'ryanto/acts_as_votable'
 gem 'rails_config'
 gem 'tzinfo-data'
