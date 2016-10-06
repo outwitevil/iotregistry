@@ -1,0 +1,41 @@
+<h1>Listing firmwares</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Iotdevice</th>
+      <th>Download url</th>
+      <th>Version</th>
+      <th>Name</th>
+      <th>Readme url</th>
+      <th>Readme title</th>
+      <th>Readme description</th>
+      <th>Enabled</th>
+      <th>Requirements</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @firmwares.each do |firmware| %>
+      <tr>
+        <td><%= firmware.iotdevice %></td>
+        <td><%= firmware.download_url %></td>
+        <td><%= firmware.version %></td>
+        <td><%= firmware.name %></td>
+        <td><%= firmware.readme_url %></td>
+        <td><%= firmware.readme_title %></td>
+        <td><%= firmware.readme_description %></td>
+        <td><%= firmware.enabled %></td>
+        <td><%= firmware.requirements %></td>
+        <td><%= link_to 'Show', firmware %></td>
+        <td><%= link_to 'Edit', edit_firmware_path(firmware) %></td>
+        <td><%= link_to 'Destroy', firmware, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Firmware', new_firmware_path %>

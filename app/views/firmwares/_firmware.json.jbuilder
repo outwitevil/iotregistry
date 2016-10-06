@@ -1,0 +1,2 @@
+json.extract! firmware, :id, :iotdevice_id, :download_url, :version, :name, :readme_url, :readme_title, :readme_description, :enabled, :requirements, :created_at, :updated_at
+json.url firmware_url(firmware, format: :json)

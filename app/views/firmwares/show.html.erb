@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Iotdevice:</strong>
+  <%= @firmware.iotdevice %>
+</p>
+
+<p>
+  <strong>Download url:</strong>
+  <%= @firmware.download_url %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @firmware.version %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @firmware.name %>
+</p>
+
+<p>
+  <strong>Readme url:</strong>
+  <%= @firmware.readme_url %>
+</p>
+
+<p>
+  <strong>Readme title:</strong>
+  <%= @firmware.readme_title %>
+</p>
+
+<p>
+  <strong>Readme description:</strong>
+  <%= @firmware.readme_description %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @firmware.enabled %>
+</p>
+
+<p>
+  <strong>Requirements:</strong>
+  <%= @firmware.requirements %>
+</p>
+
+<%= link_to 'Edit', edit_firmware_path(@firmware) %> |
+<%= link_to 'Back', firmwares_path %>
