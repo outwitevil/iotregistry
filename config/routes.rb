@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reviews
+
   resources :device_categories
 
   resources :my_iot_devices
